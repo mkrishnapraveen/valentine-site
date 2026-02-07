@@ -21,7 +21,7 @@ function App() {
         <div className="day-content">
           <h2>Rose Day</h2>
           <div className="rose-day-message">
-            <p>Roses are red, violets are blue, thorns keep things interesting — just like my attempts for you.</p>
+            <p>Roses are red, violets are blue, thorns keep things interesting—and my life is currently a cliffhanger episode waiting for your review.</p>
           </div>
         </div>
       )
