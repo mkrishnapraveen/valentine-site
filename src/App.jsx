@@ -13,7 +13,6 @@ function App() {
     "Roses are red, the sky is blue, I'm running out of things to rhyme, how are you?",
     "Roses are red, violets are blue, I can't count syllables so banana.",
     "Roses are red, violets are blue, I forgot what I was going to say, oops.",
-    "Roses are red, violets are blue, I googled this poem, so did you.",
     "Roses are red, violets are blue, I tried to be romantic but failed, boo hoo.",
     "Roses are red, violets are blue, I bought you flowers from the grocery store.",
     "Roses are red, violets are blue, that's actually not true, they're pink.",
