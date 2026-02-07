@@ -4,6 +4,35 @@ import './App.css'
 function App() {
   const [selectedDay, setSelectedDay] = useState('feb-7')
   const [selectedStyle, setSelectedStyle] = useState('original')
+  const [funnyQuoteIndex, setFunnyQuoteIndex] = useState(0)
+
+  const funnyQuotes = [
+    "Roses are red, violets are blue, I'm not good at rhyming, refrigerator.",
+    "Roses are red, grass is green, I'll never understand why you'd pick me.",
+    "Roses are red, violets are blue, my attempts at poetry are embarrassing too.",
+    "Roses are red, the sky is blue, I'm running out of things to rhyme, how are you?",
+    "Roses are red, violets are blue, I can't count syllables so banana.",
+    "Roses are red, violets are blue, I forgot what I was going to say, oops.",
+    "Roses are red, violets are blue, I googled this poem, so did you.",
+    "Roses are red, violets are blue, I tried to be romantic but failed, boo hoo.",
+    "Roses are red, violets are blue, I bought you flowers from the grocery store.",
+    "Roses are red, violets are blue, that's actually not true, they're pink.",
+    "Roses are red, the code I write is blue, I don't know why we're here, let's grab some food.",
+    "Roses are red, violets are blue, I'm terrible at poetry and so are you.",
+    "Roses are red, violets are blue, I didn't plan this, you're my backup boo.",
+    "Roses are red, violets are blue, my dog ate my homework and my love notes too.",
+    "Roses are red, violets are blue, I'm running out of ideas, you're welcome.",
+    "Roses are red, violets are blue, I can't spell 'violet' without consulting a dictionary.",
+    "Roses are red, violets are blue, your expectations are too high for my mediocre rhymes.",
+    "Roses are red, violets are blue, I forgot to water my plants and probably will yours too.",
+    "Roses are red, violets are blue, I'm just here for the conversation and cake crumbs.",
+    "Roses are red, violets are blue, I tried to be poetic but fell asleep halfway through.",
+    "Roses are red, violets are blue, my sense of humor is broken like my phone too.",
+    "Roses are red, violets are blue, I'm lactose intolerant but still eating cheese with you.",
+    "Roses are red, violets are blue, I probably should have proof-read this, oops I just did.",
+    "Roses are red, violets are blue, I have no idea what I'm doing but here's a flower for you.",
+    "Roses are red, violets are blue, I'm just winging it at this point, hope you are too."
+  ]
 
   const valentinesWeek = [
     { date: 'Feb 7', day: 'Rose Day', value: 'feb-7' },
@@ -21,7 +50,7 @@ function App() {
       const styleQuotes = {
         original:
           'Roses are red, violets are blue, thorns keep things interesting—and my life is currently a cliffhanger episode waiting for your review.',
-        funny: 'Funny quote goes here. (You can tell me the exact quotes and I will add them.)',
+        funny: funnyQuotes[funnyQuoteIndex],
         romantic: 'Romantic quote goes here. (I will replace this when you provide the copy.)'
       }
 
@@ -32,7 +61,10 @@ function App() {
             <div className="style-buttons" role="tablist" aria-label="Quote styles">
               <button
                 className={`style-button ${selectedStyle === 'funny' ? 'active' : ''}`}
-                onClick={() => setSelectedStyle('funny')}
+                onClick={() => {
+                  setSelectedStyle('funny')
+                  setFunnyQuoteIndex(Math.floor(Math.random() * funnyQuotes.length))
+                }}
                 aria-pressed={selectedStyle === 'funny'}
               >
                 Funny
