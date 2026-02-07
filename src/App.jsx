@@ -8,7 +8,6 @@ function App() {
 
   const funnyQuotes = [
     "Roses are red, violets are blue, I'm not good at rhyming, refrigerator.",
-    "Roses are red, grass is green, I'll never understand why you'd pick me.",
     "Roses are red, violets are blue, my attempts at poetry are embarrassing too.",
     "Roses are red, the sky is blue, I'm running out of things to rhyme, how are you?",
     "Roses are red, violets are blue, I can't count syllables so banana.",
@@ -16,7 +15,6 @@ function App() {
     "Roses are red, violets are blue, I tried to be romantic but failed, boo hoo.",
     "Roses are red, violets are blue, I bought you flowers from the grocery store.",
     "Roses are red, violets are blue, that's actually not true, they're pink.",
-    "Roses are red, violets are blue, I'm terrible at poetry and so are you.",
     "Roses are red, violets are blue, I'm running out of ideas, you're welcome.",
     "Roses are red, violets are blue, your expectations are too high for my mediocre rhymes.",
     "Roses are red, violets are blue, I'm just here for the conversation and cake crumbs.",
