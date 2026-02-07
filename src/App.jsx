@@ -30,8 +30,7 @@ function App() {
     "Roses are red, violets are blue, my sense of humor is broken like my phone too.",
     "Roses are red, violets are blue, I'm lactose intolerant but still eating cheese with you.",
     "Roses are red, violets are blue, I probably should have proof-read this, oops I just did.",
-    "Roses are red, violets are blue, I have no idea what I'm doing but here's a flower for you.",
-    "Roses are red, violets are blue, I'm just winging it at this point, hope you are too."
+    "Roses are red, violets are blue, I have no idea what I'm doing but here's a flower for you."
   ]
 
   const valentinesWeek = [
