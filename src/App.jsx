@@ -45,7 +45,7 @@ function App() {
     if (selectedDay === 'feb-7') {
       const styleQuotes = {
         original:
-          'Roses are red, violets are blue, thorns keep things interesting—and my life is currently a cliffhanger episode waiting for your review.',
+          'Roses are red, violets are blue, thorns keep things interesting—and my life is a cliffhanger moment waiting just for you.',
         funny: funnyQuotes[funnyQuoteIndex],
         romantic: romanticQuotes[romanticQuoteIndex]
       }
