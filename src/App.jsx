@@ -16,17 +16,12 @@ function App() {
     "Roses are red, violets are blue, I tried to be romantic but failed, boo hoo.",
     "Roses are red, violets are blue, I bought you flowers from the grocery store.",
     "Roses are red, violets are blue, that's actually not true, they're pink.",
-    "Roses are red, the code I write is blue, I don't know why we're here, let's grab some food.",
     "Roses are red, violets are blue, I'm terrible at poetry and so are you.",
     "Roses are red, violets are blue, my dog ate my homework and my love notes too.",
     "Roses are red, violets are blue, I'm running out of ideas, you're welcome.",
-    "Roses are red, violets are blue, I can't spell 'violet' without consulting a dictionary.",
     "Roses are red, violets are blue, your expectations are too high for my mediocre rhymes.",
-    "Roses are red, violets are blue, I forgot to water my plants and probably will yours too.",
     "Roses are red, violets are blue, I'm just here for the conversation and cake crumbs.",
-    "Roses are red, violets are blue, I tried to be poetic but fell asleep halfway through.",
     "Roses are red, violets are blue, my sense of humor is broken like my phone too.",
-    "Roses are red, violets are blue, I'm lactose intolerant but still eating cheese with you.",
     "Roses are red, violets are blue, I probably should have proof-read this, oops I just did.",
     "Roses are red, violets are blue, I have no idea what I'm doing but here's a flower for you."
   ]
