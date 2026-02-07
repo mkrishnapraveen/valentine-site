@@ -25,19 +25,8 @@ function App() {
   ]
 
   const romanticQuotes = [
-    "Roses are red, violets are blue, every moment with you feels like a dream come true.",
-    "Roses are red, violets are blue, your smile is the most beautiful thing I see.",
     "Roses are red, violets are blue, I fall for you more with each passing day.",
-    "Roses are red, violets are blue, you make my heart skip a beat every time you're near.",
-    "Roses are red, violets are blue, loving you is the easiest thing I've ever done.",
-    "Roses are red, violets are blue, you're the reason my days are brighter.",
     "Roses are red, violets are blue, I choose you today, tomorrow, and forever.",
-    "Roses are red, violets are blue, being with you feels like home.",
-    "Roses are red, violets are blue, you've made me believe in true love.",
-    "Roses are red, violets are blue, thank you for filling my life with joy.",
-    "Roses are red, violets are blue, you're my greatest adventure.",
-    "Roses are red, violets are blue, your love is my favorite feeling.",
-    "Roses are red, violets are blue, I'm grateful for every shared moment with you.",
     "Roses are red, violets are blue, you're the one I want by my side always."
   ]
 
