@@ -20,7 +20,6 @@ function App() {
       return (
         <div className="day-content">
           <h2>Rose Day</h2>
-          <p>A beautiful rose symbolizes love and admiration. On this day, express your feelings with a red rose.</p>
           <div className="rose-day-message">
             <p>Roses are red, violets are blue, thorns keep things interesting — just like my attempts for you.</p>
           </div>
