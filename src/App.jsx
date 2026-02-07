@@ -5,6 +5,7 @@ function App() {
   const [selectedDay, setSelectedDay] = useState('feb-7')
   const [selectedStyle, setSelectedStyle] = useState('original')
   const [funnyQuoteIndex, setFunnyQuoteIndex] = useState(0)
+  const [romanticQuoteIndex, setRomanticQuoteIndex] = useState(0)
 
   const funnyQuotes = [
     "Roses are red, violets are blue, I'm not good at rhyming, refrigerator.",
@@ -21,6 +22,23 @@ function App() {
     "Roses are red, violets are blue, my sense of humor is broken like my phone too.",
     "Roses are red, violets are blue, I probably should have proof-read this, oops I just did.",
     "Roses are red, violets are blue, I have no idea what I'm doing but here's a flower for you."
+  ]
+
+  const romanticQuotes = [
+    "Roses are red, violets are blue, every moment with you feels like a dream come true.",
+    "Roses are red, violets are blue, your smile is the most beautiful thing I see.",
+    "Roses are red, violets are blue, I fall for you more with each passing day.",
+    "Roses are red, violets are blue, you make my heart skip a beat every time you're near.",
+    "Roses are red, violets are blue, loving you is the easiest thing I've ever done.",
+    "Roses are red, violets are blue, you're the reason my days are brighter.",
+    "Roses are red, violets are blue, I choose you today, tomorrow, and forever.",
+    "Roses are red, violets are blue, being with you feels like home.",
+    "Roses are red, violets are blue, you've made me believe in true love.",
+    "Roses are red, violets are blue, thank you for filling my life with joy.",
+    "Roses are red, violets are blue, you're my greatest adventure.",
+    "Roses are red, violets are blue, your love is my favorite feeling.",
+    "Roses are red, violets are blue, I'm grateful for every shared moment with you.",
+    "Roses are red, violets are blue, you're the one I want by my side always."
   ]
 
   const valentinesWeek = [
@@ -40,7 +58,7 @@ function App() {
         original:
           'Roses are red, violets are blue, thorns keep things interesting—and my life is currently a cliffhanger episode waiting for your review.',
         funny: funnyQuotes[funnyQuoteIndex],
-        romantic: 'Romantic quote goes here. (I will replace this when you provide the copy.)'
+        romantic: romanticQuotes[romanticQuoteIndex]
       }
 
       return (
@@ -60,7 +78,10 @@ function App() {
               </button>
               <button
                 className={`style-button ${selectedStyle === 'romantic' ? 'active' : ''}`}
-                onClick={() => setSelectedStyle('romantic')}
+                onClick={() => {
+                  setSelectedStyle('romantic')
+                  setRomanticQuoteIndex(Math.floor(Math.random() * romanticQuotes.length))
+                }}
                 aria-pressed={selectedStyle === 'romantic'}
               >
                 Romantic
