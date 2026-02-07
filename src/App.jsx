@@ -18,7 +18,6 @@ function App() {
     "Roses are red, violets are blue, that's actually not true, they're pink.",
     "Roses are red, the code I write is blue, I don't know why we're here, let's grab some food.",
     "Roses are red, violets are blue, I'm terrible at poetry and so are you.",
-    "Roses are red, violets are blue, I didn't plan this, you're my backup boo.",
     "Roses are red, violets are blue, my dog ate my homework and my love notes too.",
     "Roses are red, violets are blue, I'm running out of ideas, you're welcome.",
     "Roses are red, violets are blue, I can't spell 'violet' without consulting a dictionary.",
