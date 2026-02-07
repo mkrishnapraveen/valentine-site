@@ -22,7 +22,7 @@ function App() {
           <h2>Rose Day</h2>
           <p>A beautiful rose symbolizes love and admiration. On this day, express your feelings with a red rose.</p>
           <div className="rose-day-message">
-            <p>Roses are red, violets are blue, thorns keep things interesting — just like my attempts at romance for you.</p>
+            <p>Roses are red, violets are blue, thorns keep things interesting — just like my attempts to win you over with snacks and bad jokes.</p>
           </div>
         </div>
       )
