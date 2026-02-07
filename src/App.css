@@ -149,6 +149,41 @@
   margin: 0;
 }
 
+.day-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.style-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.style-button {
+  background: transparent;
+  border: 2px solid rgba(139, 73, 105, 0.08);
+  color: #8b4969;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.18s ease;
+}
+
+.style-button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(200, 90, 120, 0.2);
+}
+
+.style-button.active {
+  background: linear-gradient(90deg, rgba(200,90,120,0.12), rgba(139,73,105,0.06));
+  border-color: #c85a6f;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(200, 90, 120, 0.08);
+}
+
 .stay-tuned {
   text-align: center;
   opacity: 0.8;

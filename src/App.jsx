@@ -3,6 +3,7 @@ import './App.css'
 
 function App() {
   const [selectedDay, setSelectedDay] = useState('feb-7')
+  const [selectedStyle, setSelectedStyle] = useState('original')
 
   const valentinesWeek = [
     { date: 'Feb 7', day: 'Rose Day', value: 'feb-7' },
@@ -17,11 +18,43 @@ function App() {
 
   const renderContent = () => {
     if (selectedDay === 'feb-7') {
+      const styleQuotes = {
+        original:
+          'Roses are red, violets are blue, thorns keep things interesting—and my life is currently a cliffhanger episode waiting for your review.',
+        funny: 'Funny quote goes here. (You can tell me the exact quotes and I will add them.)',
+        romantic: 'Romantic quote goes here. (I will replace this when you provide the copy.)'
+      }
+
       return (
         <div className="day-content">
-          <h2>Rose Day</h2>
+          <div className="day-header">
+            <h2>Rose Day</h2>
+            <div className="style-buttons" role="tablist" aria-label="Quote styles">
+              <button
+                className={`style-button ${selectedStyle === 'funny' ? 'active' : ''}`}
+                onClick={() => setSelectedStyle('funny')}
+                aria-pressed={selectedStyle === 'funny'}
+              >
+                Funny
+              </button>
+              <button
+                className={`style-button ${selectedStyle === 'romantic' ? 'active' : ''}`}
+                onClick={() => setSelectedStyle('romantic')}
+                aria-pressed={selectedStyle === 'romantic'}
+              >
+                Romantic
+              </button>
+              <button
+                className={`style-button ${selectedStyle === 'original' ? 'active' : ''}`}
+                onClick={() => setSelectedStyle('original')}
+                aria-pressed={selectedStyle === 'original'}
+              >
+                Original
+              </button>
+            </div>
+          </div>
           <div className="rose-day-message">
-            <p>Roses are red, violets are blue, thorns keep things interesting—and my life is currently a cliffhanger episode waiting for your review.</p>
+            <p>{styleQuotes[selectedStyle]}</p>
           </div>
         </div>
       )
