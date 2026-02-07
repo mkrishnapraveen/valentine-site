@@ -185,6 +185,99 @@
   box-shadow: 0 6px 12px rgba(200, 90, 120, 0.08);
 }
 
+.rose-day-special-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.image-left {
+  display: flex;
+  justify-content: center;
+}
+
+.dummy-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(139, 73, 105, 0.15);
+}
+
+.special-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.special-right h3 {
+  font-family: 'Georgia', 'Garamond', serif;
+  font-size: 1.8rem;
+  color: #8b4969;
+  margin: 0;
+  font-weight: 600;
+}
+
+.scratch-card-container {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(139, 73, 105, 0.15);
+  border: 2px solid #8b4969;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #c85a6f, #8b4969);
+  transition: all 0.3s ease;
+}
+
+.scratch-card-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 28px rgba(139, 73, 105, 0.2);
+}
+
+.scratch-placeholder {
+  font-family: 'Georgia', 'Garamond', serif;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  text-align: center;
+}
+
+.scratch-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: linear-gradient(135deg, #c85a6f, #8b4969);
+  display: block;
+}
+
+.scratch-revealed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.revealed-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .stay-tuned {
   text-align: center;
   opacity: 0.8;
@@ -245,6 +338,20 @@
 
   .day-content p {
     font-size: 0.95rem;
+  }
+
+  .rose-day-special-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .scratch-card-container {
+    max-width: 250px;
+    height: 280px;
+  }
+
+  .special-right h3 {
+    font-size: 1.6rem;
   }
 }
 
@@ -350,6 +457,30 @@
   .rose-day-message {
     margin-top: 1rem;
     padding: 1rem;
+  }
+
+  .rose-day-special-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .image-left {
+    margin-bottom: 0.5rem;
+  }
+
+  .dummy-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .special-right h3 {
+    font-size: 1.4rem;
+  }
+
+  .scratch-card-container {
+    max-width: 100%;
+    height: 250px;
   }
 }
 

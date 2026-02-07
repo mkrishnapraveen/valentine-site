@@ -6,6 +6,7 @@ function App() {
   const [selectedStyle, setSelectedStyle] = useState('original')
   const [funnyQuoteIndex, setFunnyQuoteIndex] = useState(0)
   const [romanticQuoteIndex, setRomanticQuoteIndex] = useState(0)
+  const [isScratched, setIsScratched] = useState(false)
 
   const funnyQuotes = [
     "Roses are red, violets are blue, I'm not good at rhyming, refrigerator.",
@@ -86,6 +87,22 @@ function App() {
           </div>
           <div className="rose-day-message">
             <p>{styleQuotes[selectedStyle]}</p>
+          </div>
+          
+          <div className="rose-day-special-section">
+            <div className="image-left">
+              <img src="/images/left.jpg" alt="Rose Day" className="dummy-image" />
+            </div>
+            
+            <div className="special-right">
+              <h3>Gift for the day</h3>
+              <div className="scratch-card-container" onClick={() => setIsScratched(!isScratched)}>
+                {!isScratched && <div className="scratch-placeholder">Click me!</div>}
+                <div className="scratch-revealed" style={{ display: isScratched ? 'flex' : 'none' }}>
+                  <img src="/images/right.jpg" alt="Surprise" className="revealed-image" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )
