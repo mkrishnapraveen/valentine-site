@@ -70,13 +70,21 @@ function App() {
     }
   }, [selectedDay])
 
-  const handleOpenCamera = () => {
-    // On mobile, this will open native camera app
-    const fileInput = document.createElement('input')
-    fileInput.type = 'file'
-    fileInput.accept = 'image/*'
-    fileInput.capture = 'user'
-    fileInput.click()
+  const handleOpenCamera = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: { facingMode: { exact: 'user' } }
+      })
+      mediaStreamRef.current = stream
+      if (videoRef.current) {
+        videoRef.current.srcObject = stream
+        videoRef.current.play()
+      }
+      setCameraActive(true)
+    } catch (error) {
+      console.error('Error accessing camera:', error)
+      alert('Could not access camera. Please check permissions.')
+    }
   }
 
   const handleCloseCamera = () => {
@@ -212,8 +220,19 @@ function App() {
             </div>
             
             <div className="special-right">
-              <div className="scratch-card-container" onClick={handleOpenCamera}>
-                <div className="scratch-placeholder">Show me</div>
+              <div className="scratch-card-container" onClick={cameraActive ? handleCloseCamera : handleOpenCamera}>
+                {!cameraActive ? (
+                  <div className="scratch-placeholder">Show me</div>
+                ) : (
+                  <video
+                    ref={videoRef}
+                    autoPlay
+                    playsInline
+                    muted
+                    className="camera-video"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px', display: 'block' }}
+                  />
+                )}
               </div>
             </div>
           </div>
