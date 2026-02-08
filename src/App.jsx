@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
+const APP_VERSION = '0.2.0'
+
 function App() {
   const [selectedDay, setSelectedDay] = useState('feb-7')
   const [selectedStyle, setSelectedStyle] = useState('original')
@@ -72,22 +74,13 @@ function App() {
 
   const handleOpenCamera = async () => {
     try {
-      let stream;
-      try {
-        // Try front camera first
-        stream = await navigator.mediaDevices.getUserMedia({
-          video: { facingMode: { ideal: 'user' } }
-        })
-      } catch (e) {
-        // Fall back to any camera
-        stream = await navigator.mediaDevices.getUserMedia({
-          video: true
-        })
-      }
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: true,
+        audio: false
+      })
       mediaStreamRef.current = stream
       if (videoRef.current) {
         videoRef.current.srcObject = stream
-        videoRef.current.play()
       }
       setCameraActive(true)
     } catch (error) {
@@ -262,6 +255,7 @@ function App() {
       <header>
         <h1>From Indonesia, With Love</h1>
         <p>A small surprise to my lady, from her cutie...</p>
+        <div style={{ fontSize: '0.75rem', color: '#999', marginTop: '0.5rem' }}>v{APP_VERSION}</div>
       </header>
       <main>
         <div className="dropdown-container">
