@@ -72,9 +72,18 @@ function App() {
 
   const handleOpenCamera = async () => {
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: { exact: 'user' } }
-      })
+      let stream;
+      try {
+        // Try front camera first
+        stream = await navigator.mediaDevices.getUserMedia({
+          video: { facingMode: { ideal: 'user' } }
+        })
+      } catch (e) {
+        // Fall back to any camera
+        stream = await navigator.mediaDevices.getUserMedia({
+          video: true
+        })
+      }
       mediaStreamRef.current = stream
       if (videoRef.current) {
         videoRef.current.srcObject = stream
