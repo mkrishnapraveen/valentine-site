@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
-const APP_VERSION = '0.2.0'
+const APP_VERSION = '0.2.1'
 
 function App() {
   const [selectedDay, setSelectedDay] = useState('feb-7')
@@ -72,21 +72,12 @@ function App() {
     }
   }, [selectedDay])
 
-  const handleOpenCamera = async () => {
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({
-        video: true,
-        audio: false
-      })
-      mediaStreamRef.current = stream
-      if (videoRef.current) {
-        videoRef.current.srcObject = stream
-      }
-      setCameraActive(true)
-    } catch (error) {
-      console.error('Error accessing camera:', error)
-      alert('Could not access camera. Please check permissions.')
-    }
+  const handleOpenCamera = () => {
+    const input = document.createElement('input')
+    input.type = 'file'
+    input.accept = 'image/*'
+    input.capture = 'user'
+    input.click()
   }
 
   const handleCloseCamera = () => {
@@ -222,19 +213,8 @@ function App() {
             </div>
             
             <div className="special-right">
-              <div className="scratch-card-container" onClick={cameraActive ? handleCloseCamera : handleOpenCamera}>
-                {!cameraActive ? (
-                  <div className="scratch-placeholder">Show me</div>
-                ) : (
-                  <video
-                    ref={videoRef}
-                    autoPlay
-                    playsInline
-                    muted
-                    className="camera-video"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px', display: 'block' }}
-                  />
-                )}
+              <div className="scratch-card-container" onClick={handleOpenCamera}>
+                <div className="scratch-placeholder">Show me</div>
               </div>
             </div>
           </div>
