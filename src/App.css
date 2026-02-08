@@ -211,6 +211,26 @@
   gap: 1.5rem;
 }
 
+.crush-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(139, 73, 105, 0.08);
+  border-radius: 12px;
+  border: 2px solid rgba(139, 73, 105, 0.15);
+}
+
+.crush-message p {
+  font-family: 'Georgia', 'Garamond', serif;
+  font-size: 1.3rem;
+  color: #5a5a5a;
+  line-height: 1.8;
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+}
+
 .special-right h3 {
   font-family: 'Georgia', 'Garamond', serif;
   font-size: 1.8rem;
@@ -242,11 +262,19 @@
 }
 
 .scratch-placeholder {
-  font-family: 'Georgia', 'Garamond', serif;
-  font-size: 1.6rem;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 700;
   text-align: center;
+  padding: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+
+.camera-video {
+  border-radius: 10px;
 }
 
 .scratch-canvas {
@@ -472,6 +500,15 @@
   .dummy-image {
     width: 100%;
     height: auto;
+  }
+
+  .crush-message {
+    padding: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .crush-message p {
+    font-size: 1.1rem;
   }
 
   .special-right h3 {
