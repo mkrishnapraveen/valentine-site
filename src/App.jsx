@@ -171,7 +171,7 @@ function App() {
       )
     } else if (selectedDay === 'feb-8') {
       const styleQuotes = {
-        original: "Will you go on a date with me?",
+        original: "bangaaram, will you go out on a date with me?",
         funny: proposalFunnyQuotes[proposalFunnyIndex],
         romantic: proposalRomanticQuotes[proposalRomanticIndex]
       }
