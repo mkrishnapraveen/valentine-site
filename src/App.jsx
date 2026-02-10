@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
-const APP_VERSION = '0.3.0'
+const APP_VERSION = '0.3.1'
 
 function App() {
   const [selectedDay, setSelectedDay] = useState('feb-7')
@@ -217,6 +217,18 @@ function App() {
                 <div className="scratch-placeholder">Show me</div>
               </div>
             </div>
+          </div>
+        </div>
+      )
+    } else if (selectedDay === 'feb-9') {
+      return (
+        <div className="day-content">
+          <div className="day-header">
+            <h2>Chocolate Day</h2>
+          </div>
+          <div className="chocolate-day-message">
+            <p>🍫 Life is like a box of chocolates... 🍫</p>
+            <p>And you're the sweetest one in it.</p>
           </div>
         </div>
       )

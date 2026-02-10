@@ -165,6 +165,22 @@
   line-height: 1.6;
 }
 
+.chocolate-day-message {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(160, 82, 45, 0.1), rgba(139, 73, 105, 0.1));
+  border-radius: 12px;
+  border: 2px solid rgba(139, 73, 105, 0.2);
+  text-align: center;
+}
+
+.chocolate-day-message p {
+  font-size: 1.3rem;
+  color: #5a5a5a;
+  margin: 0.8rem 0;
+  line-height: 1.6;
+}
+
 .day-header {
   display: flex;
   align-items: center;
