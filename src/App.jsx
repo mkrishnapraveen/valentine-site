@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
-const APP_VERSION = '0.4.0'
+const APP_VERSION = '0.4.1'
 
 function App() {
   const [selectedDay, setSelectedDay] = useState('feb-7')
@@ -72,20 +72,17 @@ function App() {
     "I promise to believe in us, even when the world doubts us."
   ]
 
-  const loveLetterText = `My Dearest,
+  const loveLetterText = `bangaaram,
 
-I write this with a heart full of promises—promises I make not with just words, but with every beat of my heart.
+actual ga, i'm not that good with saying words out loud. i feel, if i say them out loud they won't become true.
+so i'll just keep it simple...
 
-I promise to love you fiercely and genuinely. To see you not just with my eyes, but with my soul. To appreciate every little thing that makes you, you.
+i'll always be there for you bangaaram. when you're happy, sad, confused, or even angry (even if that's on me). I promise, i'll just hold your hand and listen.
 
-I promise to be patient when you're upset, understanding when you're confused, and present when you need me most. I promise to laugh at your jokes (even the bad ones), and to be your strength when yours runs out.
+Finally, No matter how our days go... the easy days or the hard ones, I choose you. always...
 
-I promise to hold your dreams as if they were my own, and to support you in becoming the best version of yourself.
-
-Through rain or shine, easy days or hard ones—I promise to choose you. Every single day.
-
-Forever yours,
-Your Cutie 💕`
+love,
+Your Cutie`
 
 
   useEffect(() => {
@@ -273,13 +270,13 @@ Your Cutie 💕`
       return (
         <div className="day-content promise-day-content">
           <div className="day-header">
-            <h2>💫 Promise Day 💫</h2>
+            <h2>Promise Day</h2>
           </div>
 
           <div className="promise-sections">
             {/* Promise Cards Section */}
             <div className="promise-card-section">
-              <h3>Promise Cards</h3>
+              <h3>My Promises</h3>
               <div className="promise-card">
                 <p>{promiseCards[promiseCardIndex]}</p>
               </div>
@@ -287,28 +284,13 @@ Your Cutie 💕`
                 className="promise-nav-button"
                 onClick={() => setPromiseCardIndex((prev) => (prev + 1) % promiseCards.length)}
               >
-                Next Promise →
-              </button>
-            </div>
-
-            {/* Pinky Promise Section */}
-            <div className="pinky-promise-section">
-              <h3>Pinky Promise</h3>
-              <div className="pinky-container">
-                <div className="pinky-hands">👉 🤝 👈</div>
-                <p className="pinky-text">Seal our promise together!</p>
-              </div>
-              <button 
-                className="pinky-button"
-                onClick={() => setPromiseSealedCount((prev) => prev + 1)}
-              >
-                💕 Pinky Swear ({promiseSealedCount})
+                Pinky Promise
               </button>
             </div>
 
             {/* Letter Section */}
             <div className="letter-section">
-              <h3>Letter From My Heart</h3>
+              <h3>Letter from your little heart</h3>
               <div className="love-letter">
                 <pre>{loveLetterText}</pre>
               </div>
