@@ -181,6 +181,35 @@
   line-height: 1.6;
 }
 
+.hug-day-message {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(100, 180, 200, 0.1), rgba(139, 73, 105, 0.1));
+  border-radius: 12px;
+  border: 2px solid rgba(139, 73, 105, 0.2);
+  text-align: center;
+}
+
+.hug-day-message p {
+  font-size: 1.2rem;
+  color: #5a5a5a;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.hug-message-main {
+  font-size: 1.4rem !important;
+  font-weight: 600;
+  color: #8b4969 !important;
+  margin: 1.5rem 0 !important;
+}
+
+.hug-message-funny {
+  font-style: italic;
+  color: #7a7a7a;
+  font-size: 1.1rem !important;
+}
+
 .day-header {
   display: flex;
   align-items: center;
@@ -373,13 +402,12 @@
 
 .promise-sections {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin-top: 1.5rem;
 }
 
 .promise-card-section,
-.pinky-promise-section,
 .letter-section {
   padding: 1.5rem;
   background: rgba(139, 73, 105, 0.08);
@@ -388,7 +416,6 @@
 }
 
 .promise-card-section h3,
-.pinky-promise-section h3,
 .letter-section h3 {
   margin-top: 0;
   color: #8b4969;
@@ -433,40 +460,6 @@
 .promise-nav-button:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 14px rgba(139, 73, 105, 0.2);
-}
-
-.pinky-container {
-  text-align: center;
-  margin: 1.5rem 0;
-}
-
-.pinky-hands {
-  font-size: 3rem;
-  margin: 1rem 0;
-}
-
-.pinky-text {
-  color: #5a5a5a;
-  font-size: 1.1rem;
-  font-style: italic;
-}
-
-.pinky-button {
-  width: 100%;
-  padding: 1rem;
-  background: linear-gradient(135deg, #ff6b9d, #c85a6f);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.pinky-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 18px rgba(200, 90, 111, 0.3);
 }
 
 .love-letter {

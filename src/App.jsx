@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
-const APP_VERSION = '0.4.1'
+const APP_VERSION = '0.4.2'
 
 function App() {
   const [selectedDay, setSelectedDay] = useState('feb-7')
@@ -77,7 +77,7 @@ function App() {
 actual ga, i'm not that good with saying words out loud. i feel, if i say them out loud they won't become true.
 so i'll just keep it simple...
 
-i'll always be there for you bangaaram. when you're happy, sad, confused, or even angry (even if that's on me). I promise, i'll just hold your hand and listen.
+i'll always be there for you. when you're happy, sad, confused, or even angry (even if that's on me). I promise, i'll just hold your hand and listen.
 
 Finally, No matter how our days go... the easy days or the hard ones, I choose you. always...
 
@@ -295,6 +295,19 @@ Your Cutie`
                 <pre>{loveLetterText}</pre>
               </div>
             </div>
+          </div>
+        </div>
+      )
+    } else if (selectedDay === 'feb-12') {
+      return (
+        <div className="day-content">
+          <div className="day-header">
+            <h2>Hug Day</h2>
+          </div>
+          <div className="hug-day-message">
+            <p>I wish I could hug you right now. But since we're miles apart...</p>
+            <p className="hug-message-main">Next year, I promise I'll give you the biggest hug of your life.</p>
+            <p className="hug-message-funny">Until then... sending virtual hugs to my queen. 💚</p>
           </div>
         </div>
       )
