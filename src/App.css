@@ -364,6 +364,131 @@
   }
 }
 
+/* Promise Day Styles */
+.promise-day-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.promise-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.promise-card-section,
+.pinky-promise-section,
+.letter-section {
+  padding: 1.5rem;
+  background: rgba(139, 73, 105, 0.08);
+  border-radius: 12px;
+  border: 2px solid rgba(139, 73, 105, 0.15);
+}
+
+.promise-card-section h3,
+.pinky-promise-section h3,
+.letter-section h3 {
+  margin-top: 0;
+  color: #8b4969;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.promise-card {
+  background: linear-gradient(135deg, #fff5f1, #f5f0e8);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #c85a6f;
+  margin: 1.5rem 0;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promise-card p {
+  font-style: italic;
+  color: #5a5a5a;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}
+
+.promise-nav-button {
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #c85a6f, #8b4969);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.promise-nav-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(139, 73, 105, 0.2);
+}
+
+.pinky-container {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.pinky-hands {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.pinky-text {
+  color: #5a5a5a;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.pinky-button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #ff6b9d, #c85a6f);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pinky-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(200, 90, 111, 0.3);
+}
+
+.love-letter {
+  background: linear-gradient(135deg, #fff5f1, #f5f0e8);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 2px solid rgba(200, 90, 111, 0.2);
+  margin-top: 1.5rem;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.love-letter pre {
+  font-family: 'Georgia', 'Garamond', serif;
+  color: #5a5a5a;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+}
+
 /* Tablet & Small Devices */
 @media (min-width: 481px) and (max-width: 768px) {
   header h1 {

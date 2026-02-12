@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
-const APP_VERSION = '0.3.1'
+const APP_VERSION = '0.4.0'
 
 function App() {
   const [selectedDay, setSelectedDay] = useState('feb-7')
@@ -10,6 +10,8 @@ function App() {
   const [romanticQuoteIndex, setRomanticQuoteIndex] = useState(0)
   const [proposalFunnyIndex, setProposalFunnyIndex] = useState(0)
   const [proposalRomanticIndex, setProposalRomanticIndex] = useState(0)
+  const [promiseCardIndex, setPromiseCardIndex] = useState(0)
+  const [promiseSealedCount, setPromiseSealedCount] = useState(0)
   const [isScratched, setIsScratched] = useState(false)
   const [cameraActive, setCameraActive] = useState(false)
   const videoRef = useRef(null)
@@ -61,6 +63,29 @@ function App() {
     "You light up my world. Let me take you out and show you how special you are.",
     "I genuinely enjoy your company. Can I see you over dinner this week?"
   ]
+
+  const promiseCards = [
+    "I promise to be by your side, through thick and thin, no matter what life brings.",
+    "I promise to love you not just for who you are, but to help you become who you want to be.",
+    "I promise to hold your hand, listen to your heart, and cherish every moment with you.",
+    "I promise to make you laugh when you're sad and wipe away your tears.",
+    "I promise to believe in us, even when the world doubts us."
+  ]
+
+  const loveLetterText = `My Dearest,
+
+I write this with a heart full of promises—promises I make not with just words, but with every beat of my heart.
+
+I promise to love you fiercely and genuinely. To see you not just with my eyes, but with my soul. To appreciate every little thing that makes you, you.
+
+I promise to be patient when you're upset, understanding when you're confused, and present when you need me most. I promise to laugh at your jokes (even the bad ones), and to be your strength when yours runs out.
+
+I promise to hold your dreams as if they were my own, and to support you in becoming the best version of yourself.
+
+Through rain or shine, easy days or hard ones—I promise to choose you. Every single day.
+
+Forever yours,
+Your Cutie 💕`
 
 
   useEffect(() => {
@@ -241,6 +266,53 @@ function App() {
           <div className="teddy-day-message">
             <p>🧸 The special date is here! 🧸</p>
             <p>A day to cuddle, comfort, and cherish the one you love.</p>
+          </div>
+        </div>
+      )
+    } else if (selectedDay === 'feb-11') {
+      return (
+        <div className="day-content promise-day-content">
+          <div className="day-header">
+            <h2>💫 Promise Day 💫</h2>
+          </div>
+
+          <div className="promise-sections">
+            {/* Promise Cards Section */}
+            <div className="promise-card-section">
+              <h3>Promise Cards</h3>
+              <div className="promise-card">
+                <p>{promiseCards[promiseCardIndex]}</p>
+              </div>
+              <button 
+                className="promise-nav-button"
+                onClick={() => setPromiseCardIndex((prev) => (prev + 1) % promiseCards.length)}
+              >
+                Next Promise →
+              </button>
+            </div>
+
+            {/* Pinky Promise Section */}
+            <div className="pinky-promise-section">
+              <h3>Pinky Promise</h3>
+              <div className="pinky-container">
+                <div className="pinky-hands">👉 🤝 👈</div>
+                <p className="pinky-text">Seal our promise together!</p>
+              </div>
+              <button 
+                className="pinky-button"
+                onClick={() => setPromiseSealedCount((prev) => prev + 1)}
+              >
+                💕 Pinky Swear ({promiseSealedCount})
+              </button>
+            </div>
+
+            {/* Letter Section */}
+            <div className="letter-section">
+              <h3>Letter From My Heart</h3>
+              <div className="love-letter">
+                <pre>{loveLetterText}</pre>
+              </div>
+            </div>
           </div>
         </div>
       )
